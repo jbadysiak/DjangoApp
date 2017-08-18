@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5^%seuc+&l&nv863wrdp*okh=&byuq@5zc(2m_c5ca=2zz#5&-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['soflab.csio.com', 'www.soflab.csio.com']
 
 # Application definition
 
@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social.apps.django_app.default'
+    'social.apps.django_app.default',
+    'social_django'
 )
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'csio_manager.urls'
@@ -66,10 +68,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'csio_manager.wsgi.application'
 
@@ -107,6 +118,10 @@ AUTH_PASSWORD_VALIDATORS = [
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
+
+# Login by Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '927270470971-68300n502ms06ir1mop76qqe5j5ftli2.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'nP83mEpEdgS9buoajup4_kC0'
 
 # Example for using Gmail
 EMAIL_USE_TLS = True

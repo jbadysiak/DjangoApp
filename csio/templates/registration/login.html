@@ -23,4 +23,10 @@
         </form>
         <p><a href="{% url "password_reset" %}">Zapomniałeś hasła?</a></p>
     </div>
+    <div class="social">
+        <ul>
+            <li class="google"><a href="{% url "social:begin" "google-oauth2" %}">Zaloguj się za pomocą konta Google</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
