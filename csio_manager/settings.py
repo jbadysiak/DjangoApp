@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5^%seuc+&l&nv863wrdp*okh=&byuq@5zc(2m_c5ca=2zz#5&-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['soflab.csio.com', 'www.soflab.csio.com']
 
