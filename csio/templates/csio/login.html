@@ -1,15 +1,21 @@
-{% extends "base.html" %}
+{% extends "login.html" %}
 
 {% block title %}
     Logowanie
 {% endblock %}
 
-{% block content %}
-    <h1>Logowanie</h1>
-    <p>Podaj dane logowania</p>
-    <form action="." method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <p><input type="submit" value="Zaloguj"></p>
-    </form>
+{% block panel %}
+    <div class="login-form">
+        <h1>Logowanie</h1>
+        <div class="social">
+            <li class="google">
+                <a href="{% url "social:begin" "google-oauth2" %}">Zaloguj się za pomocą konta Google</a>
+            </li>
+            <li class="withoutgoogle">
+                <a href="{% url "loginwithoutgoogle" %}">Zaloguj bez używania konta Google</a>
+            </li>
+        </div>
+
+
+    </div>
 {% endblock %}

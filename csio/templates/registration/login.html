@@ -11,14 +11,14 @@
             Spróbuj ponownie.
         </p>
     {% endif %}
-    <div class="login-form" >
-        <h1>Logowanie</h1>
-        <form action="{% url 'login' %}" method="post">
+
+    <div class="login-form">
+        <form action="{% url 'loginwithoutgoogle' %}" method="post">
             {{ form.as_p }}
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}"/>
-            <p><a href="{% url "password_reset" %}">Zapomniałeś hasła?</a></p>
             <p><input type="submit" value="Zaloguj"></p>
         </form>
+        <p><a href="{% url "password_reset" %}">Zapomniałeś hasła?</a></p>
     </div>
 {% endblock %}

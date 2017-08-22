@@ -1,7 +1,7 @@
 #panel {
-    width: 400px;
-    margin: 0 auto;
-    padding: 15px 0px 0px;
+    width: 500px;
+    margin: auto;
+    padding: 15px 15px 15px;
     background: #fff;
     border: 1px solid silver;
     font: 16px calibri;
@@ -16,12 +16,12 @@ form {
 }
 
 a {
-    color:#F99407;
+    color: #F99407;
     text-decoration: none;
 }
 
 a:hover {
-    color:#FF6600;
+    color: #FF6600;
 }
 
 label {
@@ -52,11 +52,39 @@ input[type=submit], a.button {
     font-weight: bold;
     background: #FF6600;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 14px;
     text-transform: uppercase;
 }
 
-input[id=id_username]{
-    content: "enter";
+/* social-auth */
+.social {
+    text-align: center;
+    margin: auto;
+    border: black;
+}
+
+.social li {
+    list-style: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.social li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+
+.social li.google {
+    padding: 20px;
+    background: #de1710;
+}
+
+.social li.withoutgoogle {
+    padding: 20px;
+    background: #00cffa;
 }
