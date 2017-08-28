@@ -6,9 +6,17 @@
     border: 1px solid silver;
     font: 16px calibri;
     letter-spacing: -1px;
-    -webkit-box-shadow: 0 0 2px silver;
-    -moz-box-shadow: 0 0 2px silver;
-    box-shadow: 0 0 2px silver;
+    -webkit-box-shadow: 0px 0px 2px silver;
+    -moz-box-shadow: 0 0 20px silver;
+    box-shadow: 0 0 20px silver;
+
+}
+
+#panel .logo {
+    float:left;
+    margin-right:10%;
+    padding: 10px;
+    display: block;
 }
 
 form {
@@ -24,6 +32,12 @@ a:hover {
     color: #FF6600;
 }
 
+h1 {
+    display: block;
+    width: 260px;
+    padding: 5px 10px 0px;
+}
+
 label {
     display: block;
     width: 260px;
@@ -35,7 +49,7 @@ label {
 
 p {
     display: block;
-    width: 260px;
+    width: 280px;
     padding: 0px 10px 5px;
     color: #696969;
     font-size: 16px;
@@ -62,6 +76,8 @@ input[type=submit], a.button {
     text-align: center;
     margin: auto;
     border: black;
+    margin-bottom: 10px;
+    margin-top: 85px;
 }
 
 .social li {
@@ -81,10 +97,17 @@ input[type=submit], a.button {
 
 .social li.google {
     padding: 20px;
-    background: #de1710;
+    background: #de1770;
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .social li.withoutgoogle {
     padding: 20px;
-    background: #00cffa;
+    background: #a0cffa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }

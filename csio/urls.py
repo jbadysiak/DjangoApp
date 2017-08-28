@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout, logout_then_login, password_change, password_change_done, \
     password_reset, password_reset_done, password_reset_confirm, password_reset_complete
@@ -6,7 +7,7 @@ from . import views
 urlpatterns = [
     #url(r'^login/$', views.user_login, name='login')
     url(r'^loginwithoutgoogle/$', login, name='loginwithoutgoogle'),
-    url(r'login/$', views.user_login, name='login'),
+    url(r'^login/$', views.user_login, name='login'),
     url(r'^logout/$', logout, name='logout'),
     url(r'^logout-then-login/$', logout_then_login, name='logout_then_login'),
     url(r'^dashboard/$', views.dashboard, name='dashboard'),
