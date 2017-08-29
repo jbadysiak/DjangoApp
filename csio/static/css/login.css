@@ -1,3 +1,10 @@
+#login-block {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+}
+
 #panel {
     width: 500px;
     margin: auto;
@@ -9,13 +16,12 @@
     -webkit-box-shadow: 0px 0px 2px silver;
     -moz-box-shadow: 0 0 20px silver;
     box-shadow: 0 0 20px silver;
-
 }
 
 #panel .logo {
-    float:left;
-    margin-right:10%;
-    padding: 10px;
+    float: left;
+    margin-right: 10%;
+    padding: 5px;
     display: block;
 }
 
@@ -44,6 +50,18 @@ label {
     padding: 5px 10px 0px;
     color: #696969;
     font-size: 20px;
+    text-shadow: 0 0 1px silver;
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: block;
+    width: 260px;
+    color: #de1770;
+    padding: 5px 10px 0px;
+    font-size: 16px;
+    margin-top: -23px;
     text-shadow: 0 0 1px silver;
 }
 
@@ -96,6 +114,7 @@ input[type=submit], a.button {
 }
 
 .social li.google {
+    color: #fff;
     padding: 20px;
     background: #de1770;
     margin-bottom: 10px;
@@ -105,6 +124,7 @@ input[type=submit], a.button {
 }
 
 .social li.withoutgoogle {
+    color: #fff;
     padding: 20px;
     background: #a0cffa;
     -webkit-border-radius: 5px;

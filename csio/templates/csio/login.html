@@ -7,12 +7,16 @@
 {% block panel %}
     <div class="login-form">
         <div class="social">
-            <li class="google">
-                <a href="{% url "social:begin" "google-oauth2" %}">Zaloguj się za pomocą konta Google</a>
-            </li>
-            <li class="withoutgoogle">
-                <a href="{% url "loginwithoutgoogle" %}">Zaloguj bez używania konta Google</a>
-            </li>
+            <a href="{% url "social:begin" "google-oauth2" %}">
+                <li class="google">
+                    Zaloguj się za pomocą konta Google
+                </li>
+            </a>
+            <a href="{% url "loginwithoutgoogle" %}">
+                <li class="withoutgoogle">
+                    Zaloguj bez używania konta Google
+                </li>
+            </a>
         </div>
     </div>
 {% endblock %}

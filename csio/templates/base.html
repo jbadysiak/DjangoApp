@@ -9,29 +9,28 @@
 <body>
 <div id="header">
     <span class="logo"><img src="{% static "img/logo.jpg" %}"></span>
-    {% if request.user.is_authenticated %}
-        <ul class="menu">
-            <li {% if section == "dashboard" %}class="selected"{% endif %}>
-                <a href="{% url "dashboard" %}">Panel główny</a>
-            </li>
-            <li {% if  section == "password_change" %}class="selected"{% endif %}>
-                <a href="{% url "password_change" %}">Zmiana hasła</a>
-            </li>
-        </ul>
-    {% endif %}
-
-    <span class="user">
-    {% if request.user.is_authenticated %}
-        Witaj, {{ request.user.first_name }}!
-        <a href="{% url "logout" %}">Wyloguj</a>
-    {% else %}
-        <a href="{% url "login" %}">Zaloguj</a>
-    {% endif %}
-  </span>
 </div>
-<div id="content">
-    {% block content %}
-    {% endblock %}
+
+<div id="container">
+    <div id="sidebar">
+        <ul>
+            <a href="{% url "dashboard" %}">
+                <li>Strona główna</li>
+            </a>
+            <a href="{% url "password_change" %}">
+                <li>Ustawienia</li>
+            </a>
+            <span class="user">
+                {% if request.user.is_authenticated %}
+                    <a href="{% url "logout_then_login" %}"><li>Wyloguj</li></a>
+                {% endif %}
+            </span>
+        </ul>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
 </div>
 </body>
 </html>
