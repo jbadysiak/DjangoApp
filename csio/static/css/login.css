@@ -25,6 +25,13 @@
     display: block;
 }
 
+#id_username, #id_password, #id_email{
+    width: 150px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
 form {
     margin: 0;
 }
@@ -87,6 +94,10 @@ input[type=submit], a.button {
     padding: 10px 25px;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+input[type="submit"]{
+    width: 150px;
 }
 
 /* social-auth */

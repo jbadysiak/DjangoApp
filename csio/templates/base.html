@@ -9,25 +9,27 @@
 <body>
 <div id="header">
     <span class="logo"><img src="{% static "img/logo.jpg" %}"></span>
+    <div class="user">{{ request.user.email }}</div>
 </div>
 
 <div id="container">
-    <div id="sidebar">
+    <div class="sidebar">
         <ul>
             <a href="{% url "dashboard" %}">
-                <li>Strona główna</li>
+                <li><span class="home"><img src="{% static "img/home.png" %}"></span>Strona główna</li>
             </a>
             <a href="{% url "password_change" %}">
-                <li>Ustawienia</li>
+                <li><span class="settings"><img src="{% static "img/settings.png" %}"></span>Ustawienia</li>
             </a>
             <span class="user">
                 {% if request.user.is_authenticated %}
-                    <a href="{% url "logout_then_login" %}"><li>Wyloguj</li></a>
+                    <a href="{% url "logout_then_login" %}"><li><span class="logout_icon"><img
+                            src="{% static "img/logout.png" %}"></span>Wyloguj</li></a>
                 {% endif %}
             </span>
         </ul>
     </div>
-    <div id="content">
+    <div class="content">
         {% block content %}
         {% endblock %}
     </div>

@@ -8,16 +8,16 @@
 </head>
 <body>
 <div id="login-block">
-<div id="panel">
-    <span class="logo"><img src="{% static "img/logo.jpg" %}"/></span>
-    {% if request.user.is_authenticated %}
-        <label>Użytkownik {{ request.user.email }} jest zalogowany.</label>
-        <label><a href="{% url "dashboard" %}">Powróć do strony głównej.</a></label>
-    {% else %}
-        {% block panel %}
-        {% endblock %}
-    {% endif %}
-</div>
+    <div id="panel">
+        <span class="logo"><img src="{% static "img/logo.jpg" %}"/></span>
+        {% if request.user.is_authenticated %}
+            <label>Użytkownik {{ request.user.email }} jest zalogowany.</label>
+            <label><a href="{% url "dashboard" %}">Powróć do strony głównej.</a></label>
+        {% else %}
+            {% block panel %}
+            {% endblock %}
+        {% endif %}
+    </div>
 </div>
 </body>
 </html>
