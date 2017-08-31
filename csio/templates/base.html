@@ -13,7 +13,7 @@
 </div>
 
 <div id="container">
-    <div class="sidebar">
+    <div id="sidebar">
         <ul>
             <a href="{% url "dashboard" %}">
                 <li><span class="home"><img src="{% static "img/home.png" %}"></span>Strona główna</li>
@@ -29,7 +29,7 @@
             </span>
         </ul>
     </div>
-    <div class="content">
+    <div id="content">
         {% block content %}
         {% endblock %}
     </div>
