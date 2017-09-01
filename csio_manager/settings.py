@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.core.urlresolvers import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,6 +29,10 @@ SECRET_KEY = '5^%seuc+&l&nv863wrdp*okh=&byuq@5zc(2m_c5ca=2zz#5&-'
 DEBUG = True
 
 ALLOWED_HOSTS = ['soflab.csio.com', 'www.soflab.csio.com']
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
 
 # Application definition
 
@@ -53,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'csio_manager.urls'
@@ -137,7 +143,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'pl-en'
+LANGUAGE_CODE = 'pl'
+
+LANGUAGES = (
+    ('pl', _('polski')),
+    ('en', _('angielski')),
+)
 
 TIME_ZONE = 'UTC'
 

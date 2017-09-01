@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    border-bottom: 1px solid #bbb;
     padding: 0 0 10px 0;
     margin: 10px 0 10px 0;
 }
@@ -70,7 +69,6 @@ ul {
     float: left;
     height: 100%;
     width: calc(100% - 210px);
-    background: lightblue;
     overflow: auto;
     text-align: left;
     padding: 5px;
