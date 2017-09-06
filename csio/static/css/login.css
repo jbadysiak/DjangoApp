@@ -142,3 +142,29 @@ input[type="submit"]{
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
+.lang {
+    margin-top: 10px;
+}
+
+.lang ul li{
+    text-transform: uppercase;
+    list-style: none;
+    display: inline;
+    padding: 2px 6px;
+}
+
+.lang ul li:hover{
+    background: #FF6600;
+    color: #FFFFFF;
+}
+
+.lang a {
+    font-size: 13px;
+    font-family: "Bookman Old Style";
+}
+
+.lang a:hover{
+    color: #FFFFFF;
+}
+

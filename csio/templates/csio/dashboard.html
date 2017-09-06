@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}
-    Strona główna
+    {% trans "Strona główna" %}
 {% endblock %}
 
 {% block content %}
     <h1>CSIO Manager</h1>
-    <p>Czy chciałbyś coś zgłosić albo donieść na kolegę?</p>
-    <p>Służę pomocą. Link do formularza masz <a href="">tutaj.</a></p>
+    <p>{% trans "Czy chciałbyś coś zgłosić albo donieść na kolegę" %}?</p>
+    <p>{% trans "Służę pomocą. Link do formularza masz" %} <a href="">{% trans "tutaj" %}.</a></p>
 {% endblock %}

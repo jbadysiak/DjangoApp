@@ -1,14 +1,15 @@
 {% extends "login.html" %}
+{% load i18n %}
 
 {% block title %}
-    Logowanie
+    {% trans "Logowanie" %}
 {% endblock %}
 
 {% block panel %}
     {% if form.errors %}
         <p>
-            Nazwa użytkownika lub hasło są niepoprawne.
-            Spróbuj ponownie.
+            {% trans "Nazwa użytkownika lub hasło są niepoprawne" %}.
+            {% trans "Spróbuj ponownie" %}.
         </p>
     {% endif %}
 
@@ -17,8 +18,8 @@
             {{ form.as_p }}
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}"/>
-            <p><input type="submit" value="Zaloguj"></p>
+            <p><input type="submit" value="{% trans "Zaloguj" %}"></p>
         </form>
-        <p><a href="{% url "password_reset" %}">Zapomniałeś hasła?</a></p>
+        <p><a href="{% url "password_reset" %}">{% trans "Zapomniałeś hasła" %}?</a></p>
     </div>
 {% endblock %}

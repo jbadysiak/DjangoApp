@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-06 13:05+0200\n"
+"PO-Revision-Date: 2017-09-06 13:06+0000\n"
+"Last-Translator: b'  <admin@soflab.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.7.13\n"
+
+#: .\csio\forms.py:9
+msgid "Użytkownik"
+msgstr "User"
+
+#: .\csio\forms.py:10 .\csio\forms.py:14
+msgid "Hasło"
+msgstr "Password"
+
+#: .\csio\forms.py:16
+msgid "Powtórz hasło"
+msgstr "Repeat password"
+
+#: .\csio\forms.py:26
+msgid "Hasła nie są identyczne."
+msgstr "Passwords aren't the same."
+
+#: .\csio\models.py:9
+msgid "Data urodzenia"
+msgstr "Date of birth"
+
+#: .\csio\models.py:10
+msgid "Zdjęcie"
+msgstr "Photo"
+
+#: .\csio\models.py:13
+msgid "Profil użytkownika {}."
+msgstr "User profile {}."
+
+#: .\csio\templates\base.html:18
+msgid "Język"
+msgstr "Language"
+
+#: .\csio\templates\base.html:36 .\csio\templates\csio\dashboard.html:5
+msgid "Strona główna"
+msgstr "Main page"
+
+#: .\csio\templates\base.html:39
+msgid "Ustawienia"
+msgstr "Settings"
+
+#: .\csio\templates\base.html:45
+msgid "Wyloguj"
+msgstr "Logout"
+
+#: .\csio\templates\csio\dashboard.html:10
+msgid "Czy chciałbyś coś zgłosić albo donieść na kolegę"
+msgstr "Would you like to report something or report it to a colleague"
+
+#: .\csio\templates\csio\dashboard.html:11
+msgid "Służę pomocą. Link do formularza masz"
+msgstr "I can help you. Link to the form you have"
+
+#: .\csio\templates\csio\dashboard.html:11
+msgid "tutaj"
+msgstr "here"
+
+#: .\csio\templates\csio\edit.html:5 .\csio\templates\csio\edit.html:9
+msgid "Edycja konta"
+msgstr "Edit profile"
+
+#: .\csio\templates\csio\edit.html:10
+msgid "Ustawienia konta możesz zmienić za pomocą poniższego formularza"
+msgstr "You can change profile settings using the form below"
+
+#: .\csio\templates\csio\edit.html:15
+msgid "Zapisz zmiany"
+msgstr "Save changes"
+
+#: .\csio\templates\csio\login.html:5
+#: .\csio\templates\registration\login.html:5
+msgid "Logowanie"
+msgstr "Login"
+
+#: .\csio\templates\csio\login.html:13
+msgid "Zaloguj się za pomocą konta Google"
+msgstr "Log in with Google"
+
+#: .\csio\templates\csio\login.html:18
+msgid "Zaloguj bez używania konta Google"
+msgstr "Sign in without Google"
+
+#: .\csio\templates\login.html:15
+#, python-format
+msgid "Użytkownik %(email)s jest zalogowany."
+msgstr "User %(email)s is online."
+
+#: .\csio\templates\login.html:16
+msgid "Powróć do strony głównej"
+msgstr "Return to main page"
+
+#: .\csio\templates\registration\logged_out.html:5
+#: .\csio\templates\registration\logged_out.html:9
+msgid "Wylogowanie"
+msgstr "Logged out"
+
+#: .\csio\templates\registration\logged_out.html:10
+msgid "Zostałeś poprawnie wylogowany ze strony"
+msgstr "You logout successfully"
+
+#: .\csio\templates\registration\logged_out.html:10
+msgid "Możesz zalogować się"
+msgstr "You can sign in"
+
+#: .\csio\templates\registration\logged_out.html:11
+msgid "ponownie"
+msgstr "again"
+
+#: .\csio\templates\registration\login.html:11
+msgid "Nazwa użytkownika lub hasło są niepoprawne"
+msgstr "Username or password is incorrect"
+
+#: .\csio\templates\registration\login.html:12
+msgid "Spróbuj ponownie"
+msgstr "Try again"
+
+#: .\csio\templates\registration\login.html:21
+msgid "Zaloguj"
+msgstr "Log in"
+
+#: .\csio\templates\registration\login.html:23
+#: .\csio\templates\registration\password_reset_form.html:9
+msgid "Zapomniałeś hasła"
+msgstr "Forget password"
+
+#: .\csio\templates\registration\password_change_done.html:5
+#: .\csio\templates\registration\password_change_done.html:9
+msgid "Hasło zostało zmienione"
+msgstr "Password has been changed"
+
+#: .\csio\templates\registration\password_change_done.html:10
+msgid "Zamiana hasła zakończone powodzeniem"
+msgstr "Change password successfully"
+
+#: .\csio\templates\registration\password_change_done.html:11
+msgid "Wróć"
+msgstr "Return"
+
+#: .\csio\templates\registration\password_change_done.html:11
+msgid "do panelu głównego"
+msgstr "to main page"
+
+#: .\csio\templates\registration\password_change_form.html:5
+#: .\csio\templates\registration\password_change_form.html:9
+msgid "Zmiana hasła"
+msgstr "Change password"
+
+#: .\csio\templates\registration\password_change_form.html:10
+msgid "Wypełnij poniższy formularz, aby dokonać zmiany hasła"
+msgstr "You fill below form to change password"
+
+#: .\csio\templates\registration\password_change_form.html:13
+msgid "Zatwierdź"
+msgstr "Confirm"
+
+#: .\csio\templates\registration\password_reset_complete.html:5
+#: .\csio\templates\registration\password_reset_confirm.html:5
+#: .\csio\templates\registration\password_reset_confirm.html:9
+#: .\csio\templates\registration\password_reset_done.html:5
+#: .\csio\templates\registration\password_reset_done.html:9
+#: .\csio\templates\registration\password_reset_form.html:5
+msgid "Zerowanie hasła"
+msgstr "Reset password"
+
+#: .\csio\templates\registration\password_reset_complete.html:9
+msgid "Zerowanie hasła zakończone pomyślnie"
+msgstr "Reset password successfully"
+
+#: .\csio\templates\registration\password_reset_complete.html:9
+msgid "Teraz możesz się"
+msgstr "Now you can"
+
+#: .\csio\templates\registration\password_reset_complete.html:10
+msgid "zalogować"
+msgstr "log in"
+
+#: .\csio\templates\registration\password_reset_confirm.html:11
+msgid "Dwukrotnie podaj nowe hasło"
+msgstr "Double-enter new password"
+
+#: .\csio\templates\registration\password_reset_confirm.html:15
+msgid "Zmień hasło"
+msgstr "Change password"
+
+#: .\csio\templates\registration\password_reset_confirm.html:18
+msgid "Upłynął czas przeznaczony na wyzerowanie hasła lub"
+msgstr "Time elapsed for password reset or"
+
+#: .\csio\templates\registration\password_reset_confirm.html:18
+msgid "link został już wykorzystany"
+msgstr "the link has already been used"
+
+#: .\csio\templates\registration\password_reset_confirm.html:19
+msgid "Ponownie przystąp do procedury zmiany zapomnianego hasła"
+msgstr "Again, proceed to the procedure for changing a forgotten password"
+
+#: .\csio\templates\registration\password_reset_done.html:10
+msgid "Została wysłana wiadomość na podany adres email"
+msgstr "A message has been sent to the email address provided"
+
+#: .\csio\templates\registration\password_reset_done.html:11
+msgid ""
+"Jeśli email nie dotrał na Twoją skrzynkę pocztową sprawdź, czy podałeś "
+"poprawny adres email"
+msgstr ""
+"If your email did not arrive at your mailbox, check that you have "
+"enteredcorrect email address"
+
+#: .\csio\templates\registration\password_reset_email.html:3
+msgid ""
+"Otrzymaliśmy żadanie wyzerowania hasła dla użytkownika o adresie e-mail"
+msgstr "We received request reset password for user with email address"
+
+#: .\csio\templates\registration\password_reset_email.html:4
+msgid "Kliknij poniższe łącze"
+msgstr "Click the link below"
+
+#: .\csio\templates\registration\password_reset_email.html:6
+msgid "Twoja nazwa użytkownika"
+msgstr "Your username is"
+
+#: .\csio\templates\registration\password_reset_form.html:10
+msgid "Podaj adres e-mail, aby zdefiniować nowe hasło"
+msgstr "Enter an email address to define a new password"
+
+#: .\csio\templates\registration\password_reset_form.html:13
+msgid "Wyślij email"
+msgstr "Send email"
+
+#: .\csio\urls.py:10
+msgid "^loginwithoutgoogle/$"
+msgstr ""
+
+#: .\csio\urls.py:11
+msgid "^login/$"
+msgstr ""
+
+#: .\csio\urls.py:12
+msgid "^logout/$"
+msgstr ""
+
+#: .\csio\urls.py:13
+msgid "^logout-then-login/$"
+msgstr ""
+
+#: .\csio\urls.py:14
+msgid "^dashboard/$"
+msgstr ""
+
+#: .\csio\urls.py:15
+msgid "^edit/$"
+msgstr ""
+
+#: .\csio\urls.py:16
+msgid "^password-change/$"
+msgstr ""
+
+#: .\csio\urls.py:17
+msgid "^password-change/done/$"
+msgstr ""
+
+#: .\csio\urls.py:18
+msgid "^password-reset/$"
+msgstr ""
+
+#: .\csio\urls.py:19
+msgid "^password-reset/done/$"
+msgstr ""
+
+#: .\csio\urls.py:20
+msgid "^password-reset/confirm/(?P<uidb64>[-\\w]+)/(?P<token>[-\\w]+)/$"
+msgstr ""
+
+#: .\csio\urls.py:21
+msgid "^password-reset/complete/$"
+msgstr ""
+
+#: .\csio\urls.py:22
+msgid "^register/$"
+msgstr ""
+
+#: .\csio_manager\settings.py:150
+msgid "Polski"
+msgstr "Polish"
+
+#: .\csio_manager\settings.py:151
+msgid "Angielski"
+msgstr "English"

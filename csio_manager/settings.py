@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
     'social_django',
+    'rosetta',
 )
 
 MIDDLEWARE = [
@@ -146,8 +147,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 LANGUAGE_CODE = 'pl'
 
 LANGUAGES = (
-    ('pl', _('polski')),
-    ('en', _('angielski')),
+    ('pl', _('Polski')),
+    ('en', _('Angielski')),
 )
 
 TIME_ZONE = 'UTC'

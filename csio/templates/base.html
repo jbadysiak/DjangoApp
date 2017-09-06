@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,21 +11,38 @@
 <div id="header">
     <span class="logo"><img src="{% static "img/logo.jpg" %}"></span>
     <div class="user">{{ request.user.email }}</div>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+    <div class="languages">
+        <p>{% trans "Język" %}:</p>
+        <ul class="languages">
+            {% for language in languages %}
+                <li>
+                    <a href="/{{ language.code }}/{{ request.get_full_path|slice:'4:' }}"
+                            {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                        {{ language.code }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 <div id="container">
     <div id="sidebar">
         <ul>
             <a href="{% url "dashboard" %}">
-                <li><span class="home"><img src="{% static "img/home.png" %}"></span>Strona główna</li>
+                <li><span class="home"><img src="{% static "img/home.png" %}"></span>{% trans "Strona główna" %}</li>
             </a>
             <a href="{% url "password_change" %}">
-                <li><span class="settings"><img src="{% static "img/settings.png" %}"></span>Ustawienia</li>
+                <li><span class="settings"><img src="{% static "img/settings.png" %}"></span>{% trans "Ustawienia" %}
+                </li>
             </a>
             <span class="user">
                 {% if request.user.is_authenticated %}
                     <a href="{% url "logout_then_login" %}"><li><span class="logout_icon"><img
-                            src="{% static "img/logout.png" %}"></span>Wyloguj</li></a>
+                            src="{% static "img/logout.png" %}"></span>{% trans "Wyloguj" %}</li></a>
                 {% endif %}
             </span>
         </ul>

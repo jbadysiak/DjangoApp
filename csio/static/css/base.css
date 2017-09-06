@@ -154,4 +154,48 @@ input[type=submit], a.button {
     text-transform: uppercase;
 }
 
+.languages {
+    float: right;
+    margin-top: 47px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 5px;
 
+}
+
+.languages ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.languages ul li {
+    float: left;
+    background: white;
+    margin: 0;
+    font-size: 12px;
+    padding: 2px 6px;
+    text-transform: uppercase;
+}
+
+.languages p {
+    float: left;
+    margin: 0;
+}
+
+.languages a {
+    font-family: Andalus;
+    text-decoration: none;
+    display: block;
+    margin-right: 3px;
+    color: #FF6600;
+}
+
+.languages ul li:hover{
+    background: yellowgreen;
+}
+
+.languages ul li:active{
+    background: yellowgreen;
+}

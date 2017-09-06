@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +12,25 @@
     <div id="panel">
         <span class="logo"><img src="{% static "img/logo.jpg" %}"/></span>
         {% if request.user.is_authenticated %}
-            <label>Użytkownik {{ request.user.email }} jest zalogowany.</label>
-            <label><a href="{% url "dashboard" %}">Powróć do strony głównej.</a></label>
+            <label>{% blocktrans with email=request.user.email %}Użytkownik {{ email }} jest
+                zalogowany.{% endblocktrans %}</label>
+            <label><a href="{% url "dashboard" %}">{% trans "Powróć do strony głównej" %}.</a></label>
         {% else %}
             {% block panel %}
             {% endblock %}
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            <div class="lang">
+                <ul class="lang">
+                    {% for language in languages %}
+                        <a href="/{{ language.code }}/{{ request.get_full_path|slice:'4:' }}"
+                                {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                            <li>{{ language.code }}</li>
+                        </a>
+                    {% endfor %}
+                </ul>
+            </div>
         {% endif %}
     </div>
 </div>

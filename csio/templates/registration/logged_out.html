@@ -1,10 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}
-    Wylogowanie
+    {% trans "Wylogowanie" %}
 {% endblock %}
 
 {% block content %}
-    <h1>Wylogowanie</h1>
-    <p>Zostałeś poprawnie wylogowany ze strony. Możesz zalogować się <a href="{% url "login" %}">ponownie</a></p>
+    <h1>{% trans "Wylogowanie" %}</h1>
+    <p>{% trans "Zostałeś poprawnie wylogowany ze strony" %}. {% trans "Możesz zalogować się" %}
+        <a href="{% url "login" %}">{% trans "ponownie" %}</a></p>
 {% endblock %}
