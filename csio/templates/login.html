@@ -12,8 +12,7 @@
     <div id="panel">
         <span class="logo"><img src="{% static "img/logo.jpg" %}"/></span>
         {% if request.user.is_authenticated %}
-            <label>{% blocktrans with email=request.user.email %}Użytkownik {{ email }} jest
-                zalogowany.{% endblocktrans %}</label>
+            <label>{% trans "Użytkownik" %} {{ request.user.email }} {% trans "jest zalogowany" %}.</label>
             <label><a href="{% url "dashboard" %}">{% trans "Powróć do strony głównej" %}.</a></label>
         {% else %}
             {% block panel %}

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-06 13:05+0200\n"
-"PO-Revision-Date: 2017-09-06 13:06+0000\n"
+"POT-Creation-Date: 2017-09-08 14:39+0200\n"
+"PO-Revision-Date: 2017-09-08 14:40+0000\n"
 "Last-Translator: b'  <admin@soflab.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.7.13\n"
 
-#: .\csio\forms.py:9
+#: .\csio\forms.py:9 .\csio\templates\login.html:15
 msgid "Użytkownik"
 msgstr "User"
 
@@ -50,15 +50,19 @@ msgstr "User profile {}."
 msgid "Język"
 msgstr "Language"
 
-#: .\csio\templates\base.html:36 .\csio\templates\csio\dashboard.html:5
+#: .\csio\templates\base.html:37 .\csio\templates\csio\dashboard.html:5
 msgid "Strona główna"
 msgstr "Main page"
 
-#: .\csio\templates\base.html:39
+#: .\csio\templates\base.html:44
+msgid "Profil"
+msgstr "Profile"
+
+#: .\csio\templates\base.html:51
 msgid "Ustawienia"
 msgstr "Settings"
 
-#: .\csio\templates\base.html:45
+#: .\csio\templates\base.html:59
 msgid "Wyloguj"
 msgstr "Logout"
 
@@ -100,9 +104,8 @@ msgid "Zaloguj bez używania konta Google"
 msgstr "Sign in without Google"
 
 #: .\csio\templates\login.html:15
-#, python-format
-msgid "Użytkownik %(email)s jest zalogowany."
-msgstr "User %(email)s is online."
+msgid "jest zalogowany"
+msgstr "is online"
 
 #: .\csio\templates\login.html:16
 msgid "Powróć do strony głównej"
@@ -305,3 +308,8 @@ msgstr "Polish"
 #: .\csio_manager\settings.py:151
 msgid "Angielski"
 msgstr "English"
+
+#~ msgid ""
+#~ "Użytkownik %(request.user.email)s jest\n"
+#~ "                zalogowany."
+#~ msgstr "User %(request.user.email)s is online."

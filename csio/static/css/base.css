@@ -91,6 +91,11 @@ ul {
     text-decoration: none;
 }
 
+#sidebar a.selected{
+    background: #FF6600;
+    color: #FFFFFF;
+}
+
 #sidebar ul {
     list-style-type: none;
     padding: 0px;
@@ -107,14 +112,14 @@ ul {
     border-bottom: 1px solid #bbb;
 }
 
-.home, .settings {
+.home, .settings, .edit {
     float: left;
     padding: 1px 1px 0px 1px;
 }
 
 .logout_icon {
     vertical-align: middle;
-    padding: 3px 1px 0px 1px;
+    padding: 2px 1px 0px 1px;
 }
 
 /* forms */

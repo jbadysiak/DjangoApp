@@ -32,19 +32,33 @@
 <div id="container">
     <div id="sidebar">
         <ul>
-            <a href="{% url "dashboard" %}">
-                <li><span class="home"><img src="{% static "img/home.png" %}"></span>{% trans "Strona główna" %}</li>
-            </a>
-            <a href="{% url "password_change" %}">
-                <li><span class="settings"><img src="{% static "img/settings.png" %}"></span>{% trans "Ustawienia" %}
-                </li>
-            </a>
-            <span class="user">
-                {% if request.user.is_authenticated %}
-                    <a href="{% url "logout_then_login" %}"><li><span class="logout_icon"><img
-                            src="{% static "img/logout.png" %}"></span>{% trans "Wyloguj" %}</li></a>
-                {% endif %}
-            </span>
+            {% if request.user.is_authenticated %}
+                <a href="{% url "dashboard" %}">
+                    <li><span class="home"><img src="{% static "img/home.png" %}"></span>{% trans "Strona główna" %}
+                    </li>
+                </a>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <a href="{% url "edit" %}">
+                    <li><span class="edit"><img
+                            src="{% static "img/profile.png" %}"></span>{% trans "Profil" %}
+                    </li>
+                </a>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <a href="{% url "password_change" %}">
+                    <li><span class="settings"><img
+                            src="{% static "img/settings.png" %}"></span>{% trans "Ustawienia" %}
+                    </li>
+                </a>
+            {% endif %}
+
+            {% if request.user.is_authenticated %}
+                <a href="{% url "logout_then_login" %}">
+                    <li><span class="logout_icon"><img
+                            src="{% static "img/logout.png" %}"></span>{% trans "Wyloguj" %}</li>
+                </a>
+            {% endif %}
         </ul>
     </div>
     <div id="content">
