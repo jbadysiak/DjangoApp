@@ -26,7 +26,7 @@
 }
 
 #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2{
-    width: 150px;
+    width: 200px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -47,7 +47,6 @@ a:hover {
 
 h1 {
     display: block;
-    width: 260px;
     padding: 5px 10px 0px;
 }
 
@@ -91,7 +90,7 @@ input[type=submit], a.button{
     font-weight: bold;
     background: #FF6600;
     color: #fff;
-    padding: 10px 25px;
+    padding: 10px 20px;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -103,21 +102,21 @@ input[type="submit"]{
 /* social-auth */
 .social {
     text-align: center;
-    margin: auto;
+    width: 270px;
     border: black;
-    margin-bottom: 10px;
     margin-top: 85px;
 }
 
 .social li {
+    width: 230px;
     list-style: none;
     padding: 10px 20px;
     text-align: center;
     font-size: 18px;
 }
 
-.social li a {
-    width: 100%;
+.social a {
+    width: 230px;
     height: 100%;
     display: block;
     color: #fff;
@@ -144,27 +143,37 @@ input[type="submit"]{
 }
 
 .lang {
-    margin-top: 10px;
+    margin-top: 23px;
 }
 
 .lang ul li{
     text-transform: uppercase;
     list-style: none;
     display: inline;
-    padding: 2px 6px;
-}
-
-.lang ul li:hover{
-    background: #FF6600;
-    color: #FFFFFF;
+    padding: 3px 7px;
 }
 
 .lang a {
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Bookman Old Style";
 }
 
 .lang a:hover{
+    background: #FF6600;
     color: #FFFFFF;
 }
+
+.lang a.selected{
+    background: #FF6600;
+    color: #FFFFFF;
+}
+
+.forget-password {
+    float: right;
+    margin-right: 108px;
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+
 

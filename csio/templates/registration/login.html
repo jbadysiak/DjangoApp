@@ -20,6 +20,6 @@
             <input type="hidden" name="next" value="{{ next }}"/>
             <p><input type="submit" value="{% trans "Zaloguj" %}"></p>
         </form>
-        <p><a href="{% url "password_reset" %}">{% trans "Zapomniałeś hasła" %}?</a></p>
+        <p class="forget-password"><a href="{% url "password_reset" %}">{% trans "Zapomniałeś hasła" %}?</a></p>
     </div>
 {% endblock %}

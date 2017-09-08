@@ -47,8 +47,8 @@ ul {
 
 #header .user {
     float: right;
-    font-size: 12px;
-    font-family: Calibri;
+    font-size: 14px;
+    font-family: "Bookman Old Style";
     font-weight: bold;
     margin-top: 47px;
 }
@@ -157,10 +157,9 @@ input[type=submit], a.button {
 .languages {
     float: right;
     margin-top: 47px;
-    font-size: 12px;
+    font-size: 13px;
     text-decoration: none;
     margin-right: 5px;
-
 }
 
 .languages ul {
@@ -172,10 +171,9 @@ input[type=submit], a.button {
 
 .languages ul li {
     float: left;
-    background: white;
+    background: #FF6600;
     margin: 0;
-    font-size: 12px;
-    padding: 2px 6px;
+    font-size: 13px;
     text-transform: uppercase;
 }
 
@@ -185,17 +183,20 @@ input[type=submit], a.button {
 }
 
 .languages a {
-    font-family: Andalus;
+    font-family: "Bookman Old Style";
     text-decoration: none;
     display: block;
-    margin-right: 3px;
+    padding: 2px 6px;
+    background: #FF6600;
+    color: #FFFFFF;
+}
+
+.languages a:hover{
+    background: #FFFFFF;
     color: #FF6600;
 }
 
-.languages ul li:hover{
-    background: yellowgreen;
-}
-
-.languages ul li:active{
-    background: yellowgreen;
+.languages a.selected{
+    background: #FFFFFF;
+    color: #FF6600;
 }
